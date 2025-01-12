@@ -1,0 +1,118 @@
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #282c34;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container Styles */
+.app-container {
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #61dafb;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+.traffic-light-container {
+  background-color: #333;
+  padding: 1rem;
+  width: 6rem;
+  height: 18rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+  position: relative;
+  border: 3px solid #555;
+}
+
+.light {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  opacity: 0.3;
+  transition: all 0.3s ease-in-out;
+}
+
+.red.active {
+  background-color: rgb(255, 0, 0);
+  opacity: 1;
+}
+
+.yellow.active {
+  background-color: rgb(246, 255, 0);
+  opacity: 1;
+}
+
+.green.active {
+  background-color: rgb(0, 255, 0);
+  opacity: 1;
+}
+
+.inactive {
+  background-color: rgb(107, 107, 107);
+}
+
+/* Timer Styles */
+.timer {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+}
+
+/* Status Display */
+.status {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.status-text.red {
+  color: red;
+}
+
+.status-text.yellow {
+  color: yellow;
+}
+
+.status-text.green {
+  color: lime;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .traffic-light-container {
+    width: 5rem;
+    height: 15rem;
+  }
+
+  .light {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+}
