@@ -3,19 +3,19 @@ import "./App.css";
 
 function App() {
   const [light, setLight] = useState("red");
-  const [timer, setTimer] = useState(45);
+  const [timer, setTimer] = useState(15);
 
   useEffect(() => {
     const switchLight = () => {
       if (light === "red") {
         setLight("yellow");
-        setTimer(15);
+        setTimer(5);
       } else if (light === "yellow") {
         setLight("green");
-        setTimer(30);
+        setTimer(10);
       } else if (light === "green") {
         setLight("red");
-        setTimer(45);
+        setTimer(15);
       }
     };
 
